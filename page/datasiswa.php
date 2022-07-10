@@ -51,7 +51,7 @@ $mahasiswa = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
         <td><?= $m['notelp']?></td>
         <td><?= $m['email']?></td>
         <td>
-          <a class="delete" href="<?= BASE_URL . 'dashboard.php?page=delete&id=' . $m['id'] ?>">Delete</a>
+          <a class="delete" href="<?= BASE_URL . 'process/mahasiswa/process_delete.php?act=delete&id=' . $m['id'] ?>">Delete</a>
           <a class="edit" href="<?= BASE_URL . 'dashboard.php?page=editsiswa&id=' . $m['id'] ?>">Edit</a>
         </td>
       </tr>
