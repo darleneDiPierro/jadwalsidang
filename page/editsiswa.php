@@ -55,7 +55,7 @@ $mahasiswa = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM mahasiswa 
             </div>
             <div>
                 <label>Email</label>
-                <input type="email" name="email" id="email" value="<?= $mahasiswa['nama'] ?>">
+                <input type="email" name="email" id="email" value="<?= $mahasiswa['email'] ?>">
             </div>
     
             <button type="submit">Submit</button>
