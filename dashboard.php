@@ -28,7 +28,7 @@ if ($_SESSION['id'] == null) {
         <ul>
             <li><a href="<?= BASE_URL . 'dashboard.php' ?>">Dashboard</a></li>
             <li><a href="<?= BASE_URL . 'dashboard.php?page=datasiswa' ?>">List Mahasiswa</a></li>
-            <li><a href="">List Dosen Penguji</a></li>     
+            <li><a href="<?= BASE_URL . 'dashboard.php?page=datadosen' ?>">List Dosen Penguji</a></li>     
             <li><a href="">Jadwal Sidang</a></li>     
 
             <?php if($_SESSION !== null) : ?>
