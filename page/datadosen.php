@@ -39,6 +39,7 @@ $dosen = mysqli_query($koneksi, "SELECT * FROM dosen");
         <th>Alamat</th>
         <th>No. Telp</th>
         <th>Email</th>
+        <th>Aksi</th>
       </tr>
       <?php $no = 1; ?>
       <?php foreach($dosen as $m): ?>
