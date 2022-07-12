@@ -15,6 +15,11 @@ require_once('function/koneksi.php');
 </head>
 
 <body class="loginpage">
+
+    <div>ADMIN</div>
+    <div>DOSEN</div>
+    <div>MAHASISWA</div>
+
     <div class="content">
         <div class="card-login">
             <div class="card-main">

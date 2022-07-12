@@ -7,17 +7,18 @@ require_once('../function/koneksi.php');
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 
-$query = mysqli_query($koneksi, "SELECT * FROM admin WHERE username = '$username' AND password = '$password'");
+$admin = mysqli_query($koneksi, "SELECT * FROM admin WHERE username = '$username' AND password = '$password'");
 
 // mengecek user ada atau tidak
 
-if(mysqli_num_rows($query) != 0){
-    $row = mysqli_fetch_assoc($query);
+if(mysqli_num_rows($admin) != 0){
+    $row = mysqli_fetch_assoc($admin);
     
     // membuat session 
 
     session_start();
     $_SESSION['id'] = $row['id'];
+
     header("location: ". BASE_URL . 'dashboard.php');
 
 } else {
