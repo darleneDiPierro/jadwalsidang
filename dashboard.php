@@ -29,7 +29,7 @@ if ($_SESSION['id'] == null) {
             <li><a href="<?= BASE_URL . 'dashboard.php' ?>">Dashboard</a></li>
             <li><a href="<?= BASE_URL . 'dashboard.php?page=datasiswa' ?>">List Mahasiswa</a></li>
             <li><a href="<?= BASE_URL . 'dashboard.php?page=datadosen' ?>">List Dosen Penguji</a></li>     
-            <li><a href="">Jadwal Sidang</a></li>     
+            <li><a href="<?= BASE_URL . 'dashboard.php?page=datajadwalsidang' ?>">Jadwal Sidang</a></li>     
 
             <?php if($_SESSION !== null) : ?>
                 <li class="user-nav">

@@ -16,7 +16,7 @@ if(empty($nama) || empty($nim) || empty($jeniskelamin) || empty($alamat) || empt
 
 } else {
 
-    mysqli_query($koneksi, "UPDATE mahasiswa SET nama='$nama', nim='$nim', notelp='$notelp', jeniskelamin='$jeniskelamin', alamat='$alamat', notelp='$notelp', email='$email' WHERE id='$id'");
+    mysqli_query($koneksi, "UPDATE mahasiswa SET nama='$nama', notelp='$notelp', jeniskelamin='$jeniskelamin', alamat='$alamat', notelp='$notelp', email='$email' WHERE id='$id'");
 
     header("location: " . BASE_URL . 'dashboard.php?page=datasiswa&status=success');
     
