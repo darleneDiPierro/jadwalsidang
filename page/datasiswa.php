@@ -39,7 +39,6 @@ $mahasiswa = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
         <th>Alamat</th>
         <th>No. Telp</th>
         <th>Email</th>
-        <th>Aksi</th>
       </tr>
       <?php $no = 1; ?>
       <?php foreach($mahasiswa as $m): ?>
