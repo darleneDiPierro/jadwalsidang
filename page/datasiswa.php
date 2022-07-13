@@ -22,12 +22,12 @@ $mahasiswa = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Siswa</title>
-    <link rel="stylesheet" href="<?= BASE_URL . 'aset/css/datasiswa.css' ?>">
+    <link rel="stylesheet" href="<?= base_url('aset/css/datasiswa.css')  ?>">
 </head>
 <body class="data-siswa">
   
     <div class="add-siswa">
-      <a href="<?= BASE_URL . 'dashboard.php?page=registersiswa' ?>">Tambah Mahasiswa</a>
+      <a href="<?= base_url('dashboard.php?page=registersiswa')  ?>">Tambah Mahasiswa</a>
     </div>
     
     <table class="tabel-mahasiswa">
@@ -51,8 +51,8 @@ $mahasiswa = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
         <td><?= $m['notelp']?></td>
         <td><?= $m['email']?></td>
         <td>
-          <a class="delete" href="<?= BASE_URL . 'process/mahasiswa/process_delete.php?act=delete&id=' . $m['id'] ?>">Delete</a>
-          <a class="edit" href="<?= BASE_URL . 'dashboard.php?page=editsiswa&id=' . $m['id'] ?>">Edit</a>
+          <a class="delete" href="<?= base_url('process/mahasiswa/process_delete.php?act=delete&id=' . $m['id'])  ?>">Delete</a>
+          <a class="edit" href="<?= base_url('dashboard.php?page=editsiswa&id=' . $m['id'])  ?>">Edit</a>
         </td>
       </tr>
       <?php endforeach; ?>

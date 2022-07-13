@@ -3,7 +3,7 @@ require_once('function/helper.php');
 require_once('function/koneksi.php');
 
 if($_SESSION["id"] == null) {
-    header("location: " . BASE_URL);
+    header("location: " . base_url(''));
     exit();
 }
 
@@ -20,7 +20,7 @@ $mahasiswa = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM mahasiswa 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="<?= BASE_URL . 'aset/css/editsiswa.css' ?>">
+    <link rel="stylesheet" href="<?= base_url('aset/css/editsiswa.css')  ?>">
 </head>
 <body>
     <div>
@@ -31,7 +31,7 @@ $mahasiswa = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM mahasiswa 
                 </div>
             <?php endif; ?>
     
-            <form method="POST" action="<?= BASE_URL . 'process/mahasiswa/process_edit.php' ?>" class="register-form">
+            <form method="POST" action="<?= base_url('process/mahasiswa/process_edit.php')  ?>" class="register-form">
             <input name="id" value="<?= $mahasiswa['id'] ?>" type="hidden">
             <div>
                 <label>Nama Mahasiswa/i</label>

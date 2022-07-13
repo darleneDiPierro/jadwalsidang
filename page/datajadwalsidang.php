@@ -22,12 +22,12 @@ $jadwalsidang = mysqli_query($koneksi, "SELECT * FROM jadwalsidang");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Sidang</title>
-    <link rel="stylesheet" href="<?= BASE_URL . 'aset/css/datajadwalsidang.css' ?>">
+    <link rel="stylesheet" href="<?= base_url('aset/css/datajadwalsidang.css')  ?>">
 </head>
 <body class="data-jadwalsidang">
   
     <div class="add-jadwalsidang">
-      <a href="<?= BASE_URL . 'dashboard.php?page=registerjadwalsidang' ?>">Tambah Jadwal</a>
+      <a href="<?= base_url('dashboard.php?page=registerjadwalsidang')  ?>">Tambah Jadwal</a>
     </div>
     
     <table class="tabel-jadwalsidang">
@@ -49,8 +49,8 @@ $jadwalsidang = mysqli_query($koneksi, "SELECT * FROM jadwalsidang");
         <td><?= $m['namadosen2']?></td>
         <td><?= $m['tgl']?></td>
         <td>
-          <a class="delete" href="<?= BASE_URL . 'process/jadwalsidang/process_delete.php?act=delete&id=' . $m['id'] ?>">Delete</a>
-          <a class="edit" href="<?= BASE_URL . 'dashboard.php?page=editjadwalsidang&id=' . $m['id'] ?>">Edit</a>
+          <a class="delete" href="<?= base_url('process/jadwalsidang/process_delete.php?act=delete&id=' . $m['id'])  ?>">Delete</a>
+          <a class="edit" href="<?= base_url('dashboard.php?page=editjadwalsidang&id=' . $m['id'])  ?>">Edit</a>
         </td>
       </tr>
       <?php endforeach; ?>

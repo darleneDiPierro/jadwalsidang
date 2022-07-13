@@ -17,10 +17,10 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="<?= BASE_URL . 'aset/css/registerjadwalsidang.css' ?>">
+    <link rel="stylesheet" href="<?= base_url('aset/css/registerjadwalsidang.css') ?>">
 </head>
 <body>
-    <form method="POST" action="<?= BASE_URL . 'process/jadwalsidang/process_add.php' ?>" class="register-form">
+    <form method="POST" action="<?= base_url('process/jadwalsidang/process_add.php')  ?>" class="register-form">
         <div>
             <label>Sesi</label>
             <input type="text" name="sesi" id="sesi">

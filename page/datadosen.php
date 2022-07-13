@@ -22,12 +22,12 @@ $dosen = mysqli_query($koneksi, "SELECT * FROM dosen");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Dosen Penguji</title>
-    <link rel="stylesheet" href="<?= BASE_URL . 'aset/css/datadosen.css' ?>">
+    <link rel="stylesheet" href="<?= base_url('aset/css/datadosen.css') ?>">
 </head>
 <body class="data-dosen">
   
     <div class="add-dosen">
-      <a href="<?= BASE_URL . 'dashboard.php?page=registerdosen' ?>">Tambah Dosen Penguji</a>
+      <a href="<?= base_url('dashboard.php?page=registerdosen') ?>">Tambah Dosen Penguji</a>
     </div>
     
     <table class="tabel-dosen">
@@ -52,8 +52,8 @@ $dosen = mysqli_query($koneksi, "SELECT * FROM dosen");
         <td><?= $m['notelp']?></td>
         <td><?= $m['email']?></td>
         <td>
-          <a class="delete" href="<?= BASE_URL . 'process/dosen/process_delete.php?act=delete&id=' . $m['id'] ?>">Delete</a>
-          <a class="edit" href="<?= BASE_URL . 'dashboard.php?page=editdosen&id=' . $m['id'] ?>">Edit</a>
+          <a class="delete" href="<?= base_url('process/dosen/process_delete.php?act=delete&id=' . $m['id'])  ?>">Delete</a>
+          <a class="edit" href="<?= base_url('dashboard.php?page=editdosen&id=' . $m['id']) ?>">Edit</a>
         </td>
       </tr>
       <?php endforeach; ?>
