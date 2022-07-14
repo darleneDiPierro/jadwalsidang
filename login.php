@@ -112,6 +112,16 @@ $auth->isLoggedIn();
 
 </style>
 </head>
+<<<<<<< HEAD
+<form class="html-login" method="POST" action="">
+    <div class="tampilan-menu">
+        <div class="head">
+        <a href="index.php"><img src="aset/images/backarrow.png" alt=""></a>
+            Login Admin
+            <div class="username">
+                <br>
+             <input type="username" name="uname" placeholder="username" class="username-input">
+=======
 <body>
     <form class="html-login" method="POST" action="">
         <div class="tampilan-menu">
@@ -123,6 +133,7 @@ $auth->isLoggedIn();
             <div>
                 <input type="password" name="password" placeholder="password" id="password-input">
                 <img type="checkbox" onclick="hoverPassword()" class="showpw"src="aset/images/hiddenpw.png" alt="">
+>>>>>>> 20301c7f6bfe735f0baebdda38b6a6d95d8e5e9c
             </div>
             <button type="submit" name="login_btn" class="button-input">Login</button>
         </div>

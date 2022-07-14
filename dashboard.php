@@ -3,13 +3,15 @@
     $data = $authenticated->authDetail();
 
 
-    $page = isset($_GET['page']) ? ($_GET['page']) : false;
+$page = isset($_GET['page']) ? ($_GET['page']) : false;
 
-    if (!$_SESSION['authenticated']) {
-        header("location: " . base_url(''));
-        exit();
-    }
+if (!$_SESSION['authenticated']) {
+    header("location: " . base_url(''));
+    exit();
+}
+
 ?>
+
 <?php include("message.php"); ?>
 
 
@@ -165,16 +167,20 @@
         }
 
         .daftar{
-            display:flex;
-            width:1186px;
-            height:38px;
-            border-radius: 15px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px;
-            align-content: center;
-            justify-content:center;
+        display:flex;
+        width:1186px;
+        height:38px;
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-top: 2.5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        align-content: center;
+        justify-content:center;
+        
+        
+        
         }
-
         a {
         text-decoration: none;
         }
@@ -195,6 +201,7 @@
         button{
             border-radius: 10px;
             border: none;
+            margin: 15px;
             width: 80%;
             display: flex;
             align-items: center;
@@ -202,14 +209,10 @@
             font-family: "Poppins", sans-serif;
             font-weight: bold;
         }
-
-        a{
-            text-decoration: none;
-        }
-
     </style>
 </head>
-<body>
+<body >
+
   <div class="mp">
     <div class="sidebar">
         <div class="myprofile">
@@ -225,7 +228,6 @@
                 <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
                 <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">DAFTAR SIDANG</a>
             </button>
-            
             <button class="menu-option">
                 <img src="<?= base_url('aset/images/mp-dosen/feedb.png')  ?>" alt="">
                 <a href="<?= base_url('dashboard.php?page=feedback')  ?>">FEEDBACK</a>
@@ -265,6 +267,9 @@
             ?>
       </div>
     </div>
-</div>  
+</div>
+        
+  </div>
+  
 </body>
-</html>
+</html> 

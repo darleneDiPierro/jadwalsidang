@@ -76,7 +76,7 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
     <form method="POST" action="<?= base_url('process/mahasiswa/process_add.php') ?>" class="register-form">
     <div class="tambahms">Tambah Mahasiswa</div>
         <div>
-            <input type="text" placeholder="Nama Dosen"class="nama"name="nama" id="nama">
+            <input type="text" placeholder="Nama Mahasiswa"class="nama"name="nama" id="nama">
         </div>
         <div>
             <input type="number" placeholder="NIDN"class="nama" name="nidn" id="nidn">
