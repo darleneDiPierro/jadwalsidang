@@ -262,7 +262,7 @@ if (!$_SESSION['authenticated']) {
                 if(file_exists($filename)){
                     include_once($filename);
                 } else {
-                    echo "dashboard";
+                    include("page/datajadwalsidang.php");
                 }
             ?>
       </div>
