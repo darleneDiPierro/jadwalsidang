@@ -26,11 +26,12 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
         padding: 0;
     }
     .error {
+        position: absolute;
         color: red; 
         background: #ffc2c4; 
-        padding: 10px; 
+        padding: 3px; 
         margin: 10px auto; 
-        width: 20%;
+        width: 14.1%;
     }
     .register-form {
         display: flex;
@@ -79,7 +80,7 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
 </head>
 <body>
     <form method="POST" action="<?= base_url('process/jadwalsidang/process_add.php')  ?>" class="register-form">
-    <div class="tambahdosen">Tambah Dosen Penguji</div>
+    <div class="tambahdosen">Tambah Jadwal</div>
         <div>
             <input type="number" placeholder="Sesi"class="nama"name="nama" id="nama">
         </div>

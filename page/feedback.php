@@ -85,15 +85,9 @@ require_once('function/koneksi.php');
             align-items: center
         }
         
-        .rectangle {
-            display: grid; 
-            grid-template-rows: 65% 35%;
-            width: 1292px;
-            height: 862px;
-            background-color: #a94f88;
-            border-radius: 30px;
-            justify-content: center;
-        }
+       .rectangle{
+        display 
+       }
         
         .rectangle2 {
             width: 1207px;
@@ -255,8 +249,7 @@ require_once('function/koneksi.php');
 </head>
 
 <body>
-        <div class="esgulpage">
-            <div class="rectangle">
+            
                 <div class="rectangle2">
                     <p class="header">Kumpulkan sidang skripsi kamu disubmission bawah ini!</p>
                     <p class="headerdate">6 July 2022, 12.34 AM</p>

@@ -25,6 +25,7 @@ if (!$_SESSION['authenticated']) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
     <style>
 
         * {
@@ -103,6 +104,10 @@ if (!$_SESSION['authenticated']) {
 
         .isi{
         margin-left: 4.5%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+
         }
 
 
@@ -178,6 +183,31 @@ if (!$_SESSION['authenticated']) {
         }
         a {
         text-decoration: none;
+        }
+
+        form menu-option{
+            border-radius: 10px;
+            border: none;
+            margin: 15px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+
+        }
+
+        button{
+            border-radius: 10px;
+            border: none;
+            margin: 15px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
         }
     </style>
 </head>
