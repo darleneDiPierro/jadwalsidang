@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
     <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
         .menu-option {
             border-radius: 10px;
             border: none;

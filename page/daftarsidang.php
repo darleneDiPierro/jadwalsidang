@@ -16,6 +16,7 @@ require_once('function/koneksi.php');
     <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
     <style>
         * {
+          font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
         }
@@ -140,12 +141,14 @@ require_once('function/koneksi.php');
         }
 
         .choose-file{
-        width:160px;
+        width:280px;
         height:38px;
         background-color:#FFFFFF;
         border-radius: 15px;
         font-family: 'Poppins', sans-serif;
         font-size: 20px;
+        padding-top: 5px;
+        padding-left: 10px;
         }
 
         .daftar{
@@ -154,37 +157,34 @@ require_once('function/koneksi.php');
         height:38px;
         border-radius: 15px;
         margin: 0 auto;
-        margin-top: 2.5%;
+        margin-top: 1%;
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
         align-content: center;
         justify-content:center;
-        
-        
-        
         }
+        
+        
+        
         a {
         text-decoration: none;
         }
     </style>
 </head>
 <body >
-    <div class="esgulpage">
-      <div class="rectangle">
-        <div class="isi">
         <h1 class="header">Daftar Sidang</h1>
         <div class="text"> Nama </div>
         <input class="nama"></input>
        <div class="text"> NIM </div>
        <input class="nim"></input>
        <div class="text"> Unggah file persyaratan sidang Skripsi </div>
-       <button class="choose-file"> Choose file</button>
+       <input type="file" class="choose-file"></input>
        <div class="text"> Unggah file persetujuan sidang Skripsi </div>
-       <button class="choose-file"> Choose file</button>
+       <input type="file" class="choose-file"></input>
        <div class="text"> Mengajukan kartu bimbingan </div>
-       <button class="choose-file"> Choose file</button>
+       <input type="file" class="choose-file"></input>
        <div class="text"> Mengajukan kartu bimbingan </div>
-       <button class="choose-file"> Choose file</button>
+       <input type="file" class="choose-file"></input>
       </div>
       <button class="daftar"> Daftar </button>
     </div>
