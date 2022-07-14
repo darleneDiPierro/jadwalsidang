@@ -226,25 +226,15 @@ if (!$_SESSION['authenticated']) {
             </button>
             <button class="menu-option">
                 <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">DAFTAR SIDANG</a>
+                <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">BERITA SIDANG</a>
             </button>
             <button class="menu-option">
                 <img src="<?= base_url('aset/images/mp-dosen/feedb.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=feedback')  ?>">FEEDBACK</a>
+                <a href="<?= base_url('dashboard.php?page=feedback')  ?>">LIST MAHASISWA</a>
             </button>
             <button class="menu-option">
                 <img src="<?= base_url('aset/images/mp-dosen/info.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=myprofile')  ?>">INFO USER</a>
-            </button>
-            <button class="menu-option">
-            <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                
-                <a href="<?= base_url('dashboard.php?page=datasiswa')  ?>">LIST MAHASISWA</a>
-            </button>
-            <button class="menu-option">
-            <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-
-                <a href="<?= base_url('dashboard.php?page=datadosen')  ?>">LIST DOSEN</a>
+                <a href="<?= base_url('dashboard.php?page=myprofile')  ?>">LIST DOSEN</a>
             </button>
             <form class="menu-option" action="" method="POST">
                 <button type="submit" name="logout_btn">
@@ -259,11 +249,11 @@ if (!$_SESSION['authenticated']) {
         <div class="isi">
         <?php
             $filename = "page/$page.php";
-            if(file_exists($filename)){
-                include_once($filename);
-            } else {
-                echo "DASHBOARD";
-            }
+                if(file_exists($filename)){
+                    include_once($filename);
+                } else {
+                    echo "DASHBOARD";
+                }
         ?>
       </div>
     </div>

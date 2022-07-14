@@ -111,7 +111,7 @@ $auth->isLoggedIn();
     <div class="tampilan-menu">
         <div class="head">
         <a href="index.php"><img src="aset/images/backarrow.png" alt=""></a>
-            Login
+            Login Admin
             <div class="username">
                 <br>
              <input type="username" name="uname" placeholder="username" class="username-input">
