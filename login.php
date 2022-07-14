@@ -18,7 +18,14 @@ $auth->isLoggedIn();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         
-
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    form {
+        background-image: url(<?= base_url('aset/images/landingpage/bg.png') ?>);
+        background-size:cover;
+    }    
     .html-login{
         margin: 50px;
         padding: 50px;

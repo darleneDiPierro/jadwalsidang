@@ -17,36 +17,79 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="<?= base_url('aset/css/registersiswa.css') ?>">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .error {
+        color: red; 
+        background: #ffc2c4; 
+        padding: 10px; 
+        margin: 10px auto; 
+        width: 20%;
+    }
+    .register-form {
+        display: flex;
+        flex-direction: column;
+        margin-right : 5%;
+    }
+    .nama{
+        position:relative;
+        margin-top: 0.5%;
+        margin-bottom:2%;
+        width:793px;
+        height:60px;
+        border-radius: 15px;
+        background-color: #D9D9D9;
+        opacity: 50%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;   
+    }
+    .tambahms{
+        color:white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
+        font-size: 50px;
+        padding-top: 3%;
+        padding-bottom: 5%;
+    }
+    .submit {
+        display:flex;
+        width:1186px;
+        height:38px;
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-top: 2.5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        align-content: center;
+        justify-content:center; 
+    }
+    </style>
 </head>
 <body>
     <form method="POST" action="<?= base_url('process/mahasiswa/process_add.php') ?>" class="register-form">
+    <div class="tambahms">Tambah Mahasiswa</div>
         <div>
-            <label>Nama Mahasiswa/i</label>
-            <input type="text" name="nama" id="nama">
+            <input type="text" placeholder="Nama Dosen"class="nama"name="nama" id="nama">
         </div>
         <div>
-            <label>NIM</label>
-            <input type="number" name="nim" id="nim">
+            <input type="number" placeholder="NIDN"class="nama" name="nidn" id="nidn">
         </div>
         <div>
-            <label>Jenis Kelamin</label>
-            <input type="text" name="jeniskelamin" id="jeniskelamin">
+            <input type="text" placeholder="Jenis Kelamin"class="nama" name="jeniskelamin" id="jeniskelamin">
         </div>
         <div>
-            <label>Alamat</label>
-            <input type="text" name="alamat" id="alamat">
+            <input type="text" placeholder="Alamat"class="nama" name="alamat" id="alamat">
         </div>
         <div>
-            <label>No. Telp</label>
-            <input type="text" name="notelp" id="notelp">
+            <input type="text" placeholder="No. Telp"class="nama" name="notelp" id="notelp">
         </div>
         <div>
-            <label>Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" placeholder="Email"class="nama" name="email" id="email">
         </div>
 
-        <button type="submit">Submit</button>
+        <button class="submit" type="submit">Submit</button>
     </form>
 
 </body>
