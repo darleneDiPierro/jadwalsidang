@@ -56,19 +56,22 @@ if (!$_SESSION['authenticated']) {
         color:white;
         display: flex;
         align-items: center;
+        margin-bottom:20%;
         }
         .myprofile >p {
         padding: 0 10px;
         }
 
-        button {
-        border-radius: 10px;
-        border: none;
-        margin: 15px;
-        width: 80%;
-        display: flex;
-        align-items: center;
-        padding: 0px 20px;
+        .menu-option {
+            border-radius: 10px;
+            border: none;
+            margin: 15px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
         }
 
         .menu-option >img {

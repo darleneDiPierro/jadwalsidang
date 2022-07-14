@@ -13,6 +13,7 @@ require_once('function/koneksi.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
     <style>
         * {
         margin: 0;
@@ -43,20 +44,23 @@ require_once('function/koneksi.php');
         color:white;
         display: flex;
         align-items: center;
+        margin-bottom: 20%;
         }
         .myprofile >p {
         padding: 0 10px;
         }
-
-        button {
-        border-radius: 10px;
-        border: none;
-        margin: 15px;
-        width: 80%;
-        display: flex;
-        align-items: center;
-        padding: 0px 20px;
+        .menu-option {
+            border-radius: 10px;
+            border: none;
+            margin: 15px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
         }
+        
 
         .menu-option >img {
         margin: 0px 15px;

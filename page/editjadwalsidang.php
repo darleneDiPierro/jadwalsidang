@@ -2,7 +2,6 @@
 require_once('function/helper.php');
 require_once('function/koneksi.php');
 
-
 $error = isset($_GET['emptyform']) ? ($_GET['emptyform']) : false;
 $id = isset($_GET['id']) ? ($_GET['id']) : false;
 
