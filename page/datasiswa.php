@@ -23,6 +23,10 @@ $mahasiswa = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Siswa</title>
     <link rel="stylesheet" href="<?= base_url('aset/css/datasiswa.css')  ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
 </head>
 <body class="data-siswa">
   
@@ -39,6 +43,7 @@ $mahasiswa = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
         <th>Alamat</th>
         <th>No. Telp</th>
         <th>Email</th>
+        <th>Aksi</th>
       </tr>
       <?php $no = 1; ?>
       <?php foreach($mahasiswa as $m): ?>

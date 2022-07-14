@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
     <style>
         .menu-option {
             border-radius: 10px;
