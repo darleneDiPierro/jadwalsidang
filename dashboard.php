@@ -227,36 +227,23 @@
                 <div class="dot"></div>
                 <p><?= $data['fname'].' '.$data['lname'] ; ?></p>
             </div>
-            <div class="option1">
-                <button class="menu-option">
-                    <img src="<?= base_url('aset/images/mp-dosen/Calendar.png') ?>" alt="">
-                    <a href="<?= base_url('dashboard.php?page=datajadwalsidang') ?>">INFO JADWAL</a>
-                </button>
-                <button class="menu-option" id="pengajuan-sidang">
-                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                    <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">PENGAJUAN SIDANG</a>
-                </button>
-                <button class="menu-option" id="daftar-sidang">
-                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                    <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">DAFTAR SIDANG</a>
-                </button>
-                <button class="menu-option" id="feedback">
-                    <img src="<?= base_url('aset/images/mp-dosen/feedb.png')  ?>" alt="">
-                    <a href="<?= base_url('dashboard.php?page=feedback')  ?>">FEEDBACK</a>
-                </button>
-                <button class="menu-option">
-                    <img src="<?= base_url('aset/images/mp-dosen/info.png')  ?>" alt="">
-                    <a href="<?= base_url('dashboard.php?page=myprofile')  ?>">INFO USER</a>
-                </button>
-                <button class="menu-option" id="list-ms">
-                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                    <a href="<?= base_url('dashboard.php?page=datasiswa')  ?>">LIST MAHASISWA</a>
-                </button>
-                <button class="menu-option" id="list-ds">
-                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                    <a href="<?= base_url('dashboard.php?page=datadosen')  ?>">LIST DOSEN</a>
-                </button>
-            </div>
+
+            <?php
+
+            if($_SESSION['auth_role'] == '0'){        
+                include("navbarmahasiswa.php");
+            } elseif ($_SESSION['auth_role'] == '1') {
+                include("navbaradmin.php");
+            } elseif ($_SESSION['auth_role'] == '2') {
+                include("navbardosen.php");
+            } else {
+                redirect("lu illegal", "login.php");
+            }
+
+            ?>
+
+
+
             <div class="option2">
                 <button class="menu-option" id="log-out">
                     <form action="" method="POST">
@@ -284,24 +271,5 @@
     </div>  
 </body>
 
-<script>
-    var user = localStorage.getItem("user");
-
-    if(user == "Mahasiswa"){
-        document.getElementById('list-ms').style.display = "none";
-        document.getElementById('list-ds').style.display = "none";
-        document.getElementById('pengajuan-sidang').style.display = "none";
-    }
-    else if(user == "Dosen"){
-        document.getElementById('list-ms').style.display = "none";
-        document.getElementById('list-ds').style.display = "none";
-        document.getElementById('daftar-sidang').style.display = "none";
-    }
-    else if(user == "Admin"){
-        document.getElementById('pengajuan-sidang').style.display = "none";
-        document.getElementById('feedback').style.display = "none";
-        document.getElementById('daftar-sidang').style.display = "none";
-    }
-</script>
 
 </html>

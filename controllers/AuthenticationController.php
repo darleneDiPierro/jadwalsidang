@@ -20,16 +20,6 @@ class AuthenticationController{
         }
     }
 
-    public function admin () {
-        $user_id = $_SESSION['auth_user']['user_id'];
-        $checkAdmin = "SELECT id,role_as FROM users WHERE id='$user_id' AND role_as='2' LIMIT ";
-        $result = $this->conn->query($checkAdmin);
-        if($result->num_rows == 1){
-            return true;
-        } else {
-            redirect("you aren't authorized as admin", "index.php");
-        }
-    }
 
     public function authDetail(){
         $checkAuth = $this->checkIsLoggedIn();

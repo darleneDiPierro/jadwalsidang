@@ -1,8 +1,7 @@
 <?php
     include_once('config/app.php');
-?>
+?>  
 
-<?php include("../message.php"); ?>
 <form action="" method="POST">
     <h1>Register</h1>
     <div>
@@ -28,6 +27,10 @@
     <div>
         <label for="confirm_password">Confirm Password</label>
         <input type="password" name="confirm_password" id="confirm_password">
+    </div>
+    <div>
+        <label for="confirm_password">Role : </label>
+        <input type="number" name="role_as" id="role_as" min="0" max="2">
     </div>
     <button type="submit" name="register_btn">Submit</button>
 </form>

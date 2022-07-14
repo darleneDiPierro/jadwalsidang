@@ -96,7 +96,7 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
         <div>
         <div>
             <label class="tanggal">Tanggal</label>
-            <input type="date" class="nama"name="tgl" id="tgl" placeholder="yyyy-mm-dd" value=""min="1950-01-01" max="2030-12-31">
+            <input type="date" class="nama" name="tgl" id="tgl" placeholder="mm-dd-yy" value=""min="1950-01-01" max="2030-12-31">
         </div>
         <button class="submit"type="submit">Submit</button>
     </form>

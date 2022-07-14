@@ -32,6 +32,7 @@ if(isset($_POST['register_btn'])){
     $email = validateInput($db->conn,$_POST['email']);
     $uname = validateInput($db->conn,$_POST['uname']);
     $password = validateInput($db->conn,$_POST['password']) ;
+    $role_as = validateInput($db->conn,$_POST['role_as']) ;
     $confirm_password = validateInput($db->conn,$_POST['confirm_password']);
 
     $register = new RegisterController;
@@ -43,7 +44,7 @@ if(isset($_POST['register_btn'])){
         if($result_user){
             redirect("email already exists", "register.php");
         }else{
-            $register_query = $register->registration($fname,$lname,$email,$uname,$password);
+            $register_query = $register->registration($fname,$lname,$email,$uname,$password,$role_as);
             if($register_query){
                 redirect("registered user", "login.php");
             } else {

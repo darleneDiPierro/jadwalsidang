@@ -8,8 +8,8 @@ class RegisterController {
         $this->conn = $db->conn;
     }
 
-    public function registration($fname,$lname,$email,$uname,$password){
-        $register_query = "INSERT INTO users (fname,lname,email,uname,password) VALUES ('$fname','$lname','$email','$uname','$password')";
+    public function registration($fname,$lname,$email,$uname,$password,$role_as){
+        $register_query = "INSERT INTO users (fname,lname,email,uname,password,role_as) VALUES ('$fname','$lname','$email','$uname','$password', '$role_as')";
         $result = $this->conn->query($register_query);
         return $result;
     }
