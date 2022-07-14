@@ -20,7 +20,6 @@ class AuthenticationController{
         }
     }
 
-
     public function authDetail(){
         $checkAuth = $this->checkIsLoggedIn();
         if($checkAuth){

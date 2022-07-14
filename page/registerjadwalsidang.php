@@ -82,16 +82,16 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
     <form method="POST" action="<?= base_url('process/jadwalsidang/process_add.php')  ?>" class="register-form">
     <div class="tambahdosen">Tambah Jadwal</div>
         <div>
-            <input type="number" placeholder="Sesi"class="nama"name="nama" id="nama">
+            <input type="number" placeholder="Sesi"class="nama" name="sesi" id="nama">
         </div>
         <div>
-            <input type="text" placeholder="Nama Mahasiswa"class="nama" name="nidn" id="nidn">
+            <input type="text" placeholder="Nama Mahasiswa"class="nama" name="namamhs" id="nidn">
         </div>
         <div>
-            <input type="text" placeholder="Nama Dosen 1"class="nama" name="jeniskelamin" id="jeniskelamin">
+            <input type="text" placeholder="Nama Dosen 1"class="nama" name="namadosen1" id="namadosen1">
         </div>
         <div>
-            <input type="text" placeholder="Nama Dosen 2"class="nama" name="alamat" id="alamat">
+            <input type="text" placeholder="Nama Dosen 2"class="nama" name="namadosen2" id="namadosen2">
         </div>
         <div>
         <div>

@@ -263,7 +263,7 @@
                     if(file_exists($filename)){
                         include_once($filename);
                     } else {
-                        echo "";
+                        include("page/datajadwalsidang.php");
                     }
                 ?>
         </div>
