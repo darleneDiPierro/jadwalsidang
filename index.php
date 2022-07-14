@@ -75,7 +75,7 @@ include('config/app.php');
     </style>
 </head>
 <body>
-    <img class ="logo" src="Assets/landingpage/logo.png" alt="" srcset="">
+    <img class ="logo" src="aset/images/landingpage/logo.png" alt="" srcset="">
     <h1 class="judul">Sidang Skripsi Universitas Esa Unggul</h1>
     <h4 class="judul">Login As</h4>
     <div class="landingpage">
@@ -87,7 +87,7 @@ include('config/app.php');
         </div>
         <div>
             <a href="<?= base_url('login.php') ?>">
-                <img src="<?= base_url('aset/images/landingpage/dosen.png') ?>">
+            <img src="<?= base_url('aset/images/landingpage/dosen.png') ?>" class="dot">
             </a>
             <p class="login-name">Dosen</p>
         </div>

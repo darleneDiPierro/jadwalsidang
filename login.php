@@ -21,11 +21,7 @@ $auth->isLoggedIn();
     * {
         padding: 0;
         margin: 0;
-    }
-    form {
-        background-image: url(<?= base_url('aset/images/landingpage/bg.png') ?>);
-        background-size:cover;
-    }    
+    }  
     .html-login{
         margin: 50px;
         padding: 50px;
