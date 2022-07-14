@@ -38,6 +38,7 @@ $jadwalsidang = mysqli_query($koneksi, "SELECT * FROM jadwalsidang");
         <th>Nama Dosen 1</th>
         <th>Nama Dosen 2</th>
         <th>Tanggal</th>
+        <th>Aksi</th>
       </tr>
       <?php $no = 1; ?>
       <?php foreach($jadwalsidang as $m): ?>
