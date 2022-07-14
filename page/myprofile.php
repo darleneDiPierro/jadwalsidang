@@ -3,6 +3,7 @@
     include_once('../controllers/AuthenticationController.php');
     $data = $authenticated->authDetail();
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +43,8 @@
     
 </body>
 </html>
+=======
+>>>>>>> 4670f1a83f71f7427883561f3e30cf1662f57069
 
 <div>
     <?php include('message.php'); ?>

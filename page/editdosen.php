@@ -2,7 +2,6 @@
 require_once('function/helper.php');
 require_once('function/koneksi.php');
 
-
 $error = isset($_GET['emptyform']) ? ($_GET['emptyform']) : false;
 $id = isset($_GET['id']) ? ($_GET['id']) : false;
 
@@ -16,11 +15,7 @@ $dosen = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM dosen WHERE id
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="<?= base_url('aset/css/editdosen.css')  ?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
+    <link rel="stylesheet" href="<?= BASE_URL . 'aset/css/editdosen.css' ?>">
 </head>
 <body>
     <div>
@@ -31,7 +26,7 @@ $dosen = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM dosen WHERE id
                 </div>
             <?php endif; ?>
     
-            <form method="POST" action="<?= base_url('process/dosen/process_edit.php')  ?>" class="register-form">
+            <form method="POST" action="<?= BASE_URL . 'process/dosen/process_edit.php' ?>" class="register-form">
             <input name="id" value="<?= $dosen['id'] ?>" type="hidden">
             <div>
                 <label>Nama Dosen</label>

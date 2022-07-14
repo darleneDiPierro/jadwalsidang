@@ -1,4 +1,5 @@
 <?php
+    
     class LoginController {
         public function __construct()
         {
@@ -12,6 +13,7 @@
          if($result->num_rows > 0){
              $data = $result->fetch_assoc();
              $this->userAuthentication($data);
+             
              return true;
          }else {
              return false;

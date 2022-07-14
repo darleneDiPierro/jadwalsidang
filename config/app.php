@@ -11,7 +11,6 @@ include_once('DatabaseConnection.php');
 $db = new DatabaseConnection;
 include('codes/auth.php');
 
-
 function base_url($slug){
     echo SITE_URL.$slug;
 }
