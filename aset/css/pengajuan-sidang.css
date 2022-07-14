@@ -1,0 +1,88 @@
+:root{
+    font-family: "Poppins", sans-serif;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mp {
+    display: flex;
+    height: 100vh;
+  }
+  .sidebar {
+    background-image: url(Assets/mp-dosen/bg.png);
+    background-size: cover;
+    flex: 11;
+  }
+  .dot {
+    background-image: url(Assets/mp-dosen/profile.png);
+    background-size: cover;
+    height: 3rem;
+    width: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  .myprofile {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20%;
+  }
+  .myprofile > p {
+    padding: 0 10px;
+  }
+  
+  .menu-option {
+    border-radius: 10px;
+    border: none;
+    margin: 15px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+  }
+  
+  .menu-option > img {
+    margin: 0px 15px;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+  .esgulpage {
+    background-image: url(Assets/mp-dosen/esgulpage.png);
+    background-size: cover;
+    display: flex;
+    flex: 37;
+    justify-content: center;
+    align-items: center
+  }
+  
+  .rectangle {
+    display: flex; 
+    width: 1292px;
+    height: 862px;
+    background-color: #a94f88;
+    border-radius: 30px;
+    justify-content: center;
+  }
+
+  .rectangle2{
+    position: absolute;
+    width: 1164px;
+    height: 631px;
+    background: rgba(255, 255, 255, 0.35);
+    margin-top:8.5rem;
+    border-radius: 20px;
+  }
+  a {
+    text-decoration: none;
+  }

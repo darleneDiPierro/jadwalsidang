@@ -1,6 +1,6 @@
 <?php
-require_once('function/helper.php');
-require_once('function/koneksi.php');
+  require_once('function/helper.php');
+  require_once('function/koneksi.php');
 ?>
 
 <!DOCTYPE html>
@@ -61,8 +61,6 @@ require_once('function/koneksi.php');
             font-family: "Poppins", sans-serif;
             font-weight: bold;
         }
-        
-
         .menu-option >img {
         margin: 0px 15px;
         }
@@ -80,7 +78,6 @@ require_once('function/koneksi.php');
         justify-content: center;
         }
 
-
         .rectangle{
         width:1292px;
         height:862px;
@@ -88,11 +85,6 @@ require_once('function/koneksi.php');
         border-radius: 30px;
         align-self: center;
         }
-
-        .isi{
-        margin-left: 4.5%;
-        }
-
 
         .header{
         position: relative;
@@ -152,44 +144,36 @@ require_once('function/koneksi.php');
         }
 
         .daftar{
-        display:flex;
-        width:1186px;
-        height:38px;
-        border-radius: 15px;
-        margin: 0 auto;
-        margin-top: 1%;
-        font-family: 'Poppins', sans-serif;
-        font-size: 24px;
-        align-content: center;
-        justify-content:center;
+          display:flex;
+          width:1186px;
+          height:38px;
+          border-radius: 15px;
+          margin-top: 5vh;
+          font-family: 'Poppins', sans-serif;
+          font-size: 24px;
+          align-content: center;
+          justify-content:center;
         }
-        
-        
-        
+
         a {
         text-decoration: none;
         }
     </style>
 </head>
 <body >
-        <h1 class="header">Daftar Sidang</h1>
-        <div class="text"> Nama </div>
-        <input class="nama"></input>
-       <div class="text"> NIM </div>
-       <input class="nim"></input>
-       <div class="text"> Unggah file persyaratan sidang Skripsi </div>
-       <input type="file" class="choose-file"></input>
-       <div class="text"> Unggah file persetujuan sidang Skripsi </div>
-       <input type="file" class="choose-file"></input>
-       <div class="text"> Mengajukan kartu bimbingan </div>
-       <input type="file" class="choose-file"></input>
-       <div class="text"> Mengajukan kartu bimbingan </div>
-       <input type="file" class="choose-file"></input>
-      </div>
-      <button class="daftar"> Daftar </button>
-    </div>
-</div>
-        
-  </div>
+  <h1 class="header">Daftar Sidang</h1>
+  <div class="text"> Nama </div>
+  <input class="nama"></input>
+  <div class="text"> NIM </div>
+  <input class="nim"></input>
+  <div class="text"> Unggah file persyaratan sidang Skripsi </div>
+  <input type="file" class="choose-file"></input>
+  <div class="text"> Unggah file persetujuan sidang Skripsi </div>
+  <input type="file" class="choose-file"></input>
+  <div class="text"> Mengajukan kartu bimbingan </div>
+  <input type="file" class="choose-file"></input>
+  <div class="text"> Mengajukan kartu bimbingan</div>
+  <input type="file" class="choose-file"></input>
+  <button class="daftar">Daftar</button>
 </body>
 </html> 

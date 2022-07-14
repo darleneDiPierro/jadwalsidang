@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Sidang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .mp {
+        display: flex;
+        height: 100vh;
+      }
+      .sidebar {
+        background-image: url(aset/images/mp-dosen/bg.png);
+        background-size: cover;
+        flex: 11;
+      }
+      .dot {
+        background-image: url(aset/images/mp-dosen/profile.png);
+        background-size: cover;
+        height: 3rem;
+        width: 3rem;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 1%;
+        margin-top: 1%;
+      }
+      .myprofile {
+        color: white;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20%;
+      }
+      .myprofile > p {
+        padding: 0 10px;
+      }
+
+      .menu-option {
+        border-radius: 10px;
+        border: none;
+        margin: 15px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+      }
+
+      .menu-option > img {
+        margin: 0px 15px;
+      }
+      .option {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: stretch;
+      }
+      .esgulpage {
+        background-image: url(aset/images/esaunggul.png);
+        background-size: cover;
+        display: flex;
+        flex: 37;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .rectangle {
+        display: flex;
+        width: 1292px;
+        height: 862px;
+        background-color: #a94f88;
+        border-radius: 30px;
+        justify-content: center;
+      }
+
+      .rectangle2 {
+        position: absolute;
+        width: 1164px;
+        height: 631px;
+        background: rgba(255, 255, 255, 0.35);
+        margin-top: 8.5rem;
+        border-radius: 20px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .profile img {
+        width: 5rem;
+        height: 5rem;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <body class="mp">
+      <div class="sidebar">
+        <div class="myprofile">
+          <div class="dot"></div>
+          <p>Nama Kamu</p>
+        </div>
+        <div class="option">
+          <button class="menu-option">
+            <img src="aset/images/mp-dosen/Calendar.png" alt="" />
+            <a href="mp-dosen.html">INFO JADWAL</a>
+          </button>
+          <button class="menu-option">
+            <img src="aset/images/mp-dosen/p-sidang.png" alt="" />
+            <a href="pengajuan-sidang.html">PENGAJUAN SIDANG</a>
+          </button>
+          <button class="menu-option">
+            <img src="aset/images/mp-dosen/feedb.png" alt="" />
+            <a href="feedback-dosen.html">FEEDBACK</a>
+          </button>
+          <button class="menu-option">
+            <img src="aset/images/mp-dosen/info.png" alt="" />
+            <a href="info-dosen.html">INFO MAHASISWA</a>
+          </button>
+          <button class="menu-option">
+            <img src="aset/images/mp-dosen/logout.png" alt="" />
+            <a href="login-dosen.html">LOGOUT</a>
+          </button>
+        </div>
+      </div>
+      <div class="esgulpage">
+        <div class="rectangle">
+          <div class="rectangle2">
+            <div class="profile">
+              <img src="aset/images/mp-dosen/profile.png"/>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </body>
+</html>
