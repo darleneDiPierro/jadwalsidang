@@ -5,7 +5,7 @@ define('DB_USER','root');
 define('DB_PASSWORD','');
 define('DB_DATABASE','auth');
 
-define('SITE_URL', 'http://localhost/');
+define('SITE_URL', 'http://localhost/jadwalsidang/');
 
 include_once('DatabaseConnection.php');
 $db = new DatabaseConnection;

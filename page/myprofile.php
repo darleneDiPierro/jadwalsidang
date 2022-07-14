@@ -3,6 +3,41 @@
     include_once('../controllers/AuthenticationController.php');
     $data = $authenticated->authDetail();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Sidang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .menu-option {
+            border-radius: 10px;
+            border: none;
+            margin: 15px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+        }
+
+        .myprofile {
+            color: white;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20%;
+        }
+        
+</head>
+<body>
+    
+</body>
+</html>
 
 <div>
     <?php include('message.php'); ?>
