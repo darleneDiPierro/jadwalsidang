@@ -18,98 +18,116 @@ $auth->isLoggedIn();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         
-.html-login{
-    background-image: url(Assets/bg.png);
-    background-size: cover;
-    margin: 50px;
-    padding: 50px;
-    text-align: center;
-} 
 
-.tampilan-menu {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    box-sizing: border-box;
-    background-color: #ECECEC;
-    position: absolute;
-    height: 678px;
-    width: 678px;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    font-weight: bold;
-    font-size: 48px;
-}
-.head {
-    padding-top: 35px;
-    font-family: 'Poppins', sans-serif;
-}
+    .html-login{
+        margin: 50px;
+        padding: 50px;
+        text-align: center;
+    } 
 
-.username-input{
-    color:black;
-    height: 60px;
-    width: 508px;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 24px;
-  
-}
+    .tampilan-menu {
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        box-sizing: border-box;
+        background-color: #ECECEC;
+        position: absolute;
+        height: 678px;
+        width: 678px;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        font-weight: bold;
+        font-size: 48px;
+    }
+    .head {
+        padding-top: 35px;
+        font-family: 'Poppins', sans-serif;
+    }
 
-#password-input
-{
-    color:black;
-    height: 60px;
-    width: 508px;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 24px;
-
-}
-
-.button-input{
-    height: 66px;
-    width: 508px;
-    background-image: linear-gradient(#254edb,#254edb);
-    color: #ffffff;
-    font-size: 32px;
-    margin: 8px 0;
-    margin: 30px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 24px;
-  
-}
-
-.showpw {
-    display:flex;
-    justify-content: flex-start;
+    .username-input{
+        color:black;
+        height: 60px;
+        width: 508px;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 24px;
+        margin: 2vh 0;
     
-}
+    }
 
-a {
-    text-decoration: none;
-}
-    </style>
+    #password-input
+    {
+        color:black;
+        height: 60px;
+        width: 508px;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 24px;
+        margin: 2vh 0;
+
+    }
+
+    .button-input{
+        height: 66px;
+        width: 508px;
+        background-image: linear-gradient(#254edb,#254edb);
+        color: #ffffff;
+        font-size: 32px;
+        margin: 8px 0;
+        margin: 30px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 24px;
+    
+    }
+
+    .showpw {
+        position: absolute; ;
+        right: 100px;
+        top: calc(32vh + 5px);
+        
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a img{
+        position:absolute;
+        left: 9px;
+    }
+
+</style>
 </head>
 <form class="html-login" method="POST" action="">
     <div class="tampilan-menu">
         <div class="head">
+        <a href="index.php"><img src="aset/images/backarrow.png" alt=""></a>
             Login
             <div class="username">
                 <br>
-             <input type="username" name="uname" placeholder="username" class="username-input"><br>
+             <input type="username" name="uname" placeholder="username" class="username-input">
             </div>
         <div class="password">
-            <br>
-            <input type="password" name="password" placeholder="password" id="password-input"><br>    
+            <input type="password" name="password" placeholder="password" id="password-input">
+            <img type="checkbox" onclick="hoverPassword()" class="showpw"src="aset/images/hiddenpw.png" alt="">
             <button type="submit" name="login_btn" class="button-input">Login</button>
         </div>
     </div>
-    
+    <script>
+        function hoverPassword() {
+        var x = document.getElementById("password-input");
+        if (x.type === "password") {
+        x.type = "text";
+        } else {
+        x.type = "password";
+        }
+}
+    </script>
 </form>
 </html>
