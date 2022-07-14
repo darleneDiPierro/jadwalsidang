@@ -1,9 +1,8 @@
 <?php
-include('config/app.php');
-
+    include_once('config/app.php');
 ?>
 
-<?php include("message.php"); ?>
+<?php include("../message.php"); ?>
 <form action="" method="POST">
     <h1>Register</h1>
     <div>
