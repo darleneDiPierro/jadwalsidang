@@ -295,6 +295,7 @@
     else if(user == "Dosen"){
         document.getElementById('list-ms').style.display = "none";
         document.getElementById('list-ds').style.display = "none";
+        document.getElementById('daftar-sidang').style.display = "none";
     }
     else if(user == "Admin"){
         document.getElementById('pengajuan-sidang').style.display = "none";
