@@ -3,8 +3,6 @@
     $data = $authenticated->authDetail();
 
 
-
-
 $page = isset($_GET['page']) ? ($_GET['page']) : false;
 
 if (!$_SESSION['authenticated']) {

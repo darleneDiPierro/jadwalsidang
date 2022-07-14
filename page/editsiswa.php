@@ -2,11 +2,6 @@
 require_once('function/helper.php');
 require_once('function/koneksi.php');
 
-if($_SESSION["id"] == null) {
-    header("location: " . base_url(''));
-    exit();
-}
-
 $error = isset($_GET['emptyform']) ? ($_GET['emptyform']) : false;
 $id = isset($_GET['id']) ? ($_GET['id']) : false;
 
