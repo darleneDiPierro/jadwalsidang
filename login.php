@@ -16,12 +16,20 @@ $auth->isLoggedIn();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         
     * {
         padding: 0;
         margin: 0;
     }  
+
+    body {
+        background-image: url(<?= base_url('aset/images/landingpage/bg.png') ?>);
+        background-size: cover;
+    }
+
     .html-login{
         margin: 50px;
         padding: 50px;
@@ -42,9 +50,13 @@ $auth->isLoggedIn();
         font-weight: bold;
         font-size: 48px;
     }
-    .head {
-        padding-top: 35px;
-        font-family: 'Poppins', sans-serif;
+
+    #head{
+        text-align: start;
+    }
+
+    #head div {
+        text-align: center;
     }
 
     .username-input{
@@ -57,7 +69,6 @@ $auth->isLoggedIn();
         box-sizing: border-box;
         font-size: 24px;
         margin: 2vh 0;
-    
     }
 
     #password-input
@@ -89,48 +100,47 @@ $auth->isLoggedIn();
     
     }
 
-    .showpw {
-        position: absolute; ;
-        right: 100px;
-        top: calc(32vh + 5px);
-        
-    }
-
     a {
         text-decoration: none;
     }
 
-    a img{
-        position:absolute;
-        left: 9px;
+    .showpw{
+        position: absolute;
+        top: 29.75vh;
+        right: 100px;
     }
 
 </style>
 </head>
-<form class="html-login" method="POST" action="">
-    <div class="tampilan-menu">
-        <div class="head">
-        <a href="index.php"><img src="aset/images/backarrow.png" alt=""></a>
-            Login
-            <div class="username">
-                <br>
-             <input type="username" name="uname" placeholder="username" class="username-input">
+<body>
+    <form class="html-login" method="POST" action="">
+        <div class="tampilan-menu">
+            <div id="head">
+                <a href="index.php"><img src="aset/images/backarrow.png" alt=""></a>
+                <div id="head-text"></div>
             </div>
-        <div class="password">
-            <input type="password" name="password" placeholder="password" id="password-input">
-            <img type="checkbox" onclick="hoverPassword()" class="showpw"src="aset/images/hiddenpw.png" alt="">
+            <input type="username" name="uname" placeholder="username" class="username-input">
+            <div>
+                <input type="password" name="password" placeholder="password" id="password-input">
+                <img type="checkbox" onclick="hoverPassword()" class="showpw"src="aset/images/hiddenpw.png" alt="">
+            </div>
             <button type="submit" name="login_btn" class="button-input">Login</button>
         </div>
-    </div>
-    <script>
+    </form>
+</body>
+    <script>        
+
+        document.getElementById("head-text").innerText = "Login "+ localStorage.getItem("user");
+
         function hoverPassword() {
-        var x = document.getElementById("password-input");
-        if (x.type === "password") {
-        x.type = "text";
-        } else {
-        x.type = "password";
+            var x = document.getElementById("password-input");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         }
-}
     </script>
-</form>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

@@ -3,13 +3,17 @@
     $data = $authenticated->authDetail();
 
 
-    $page = isset($_GET['page']) ? ($_GET['page']) : false;
 
-    if (!$_SESSION['authenticated']) {
-        header("location: " . base_url(''));
-        exit();
-    }
+
+$page = isset($_GET['page']) ? ($_GET['page']) : false;
+
+if (!$_SESSION['authenticated']) {
+    header("location: " . base_url(''));
+    exit();
+}
+
 ?>
+
 <?php include("message.php"); ?>
 
 
@@ -165,16 +169,20 @@
         }
 
         .daftar{
-            display:flex;
-            width:1186px;
-            height:38px;
-            border-radius: 15px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px;
-            align-content: center;
-            justify-content:center;
+        display:flex;
+        width:1186px;
+        height:38px;
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-top: 2.5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        align-content: center;
+        justify-content:center;
+        
+        
+        
         }
-
         a {
         text-decoration: none;
         }
@@ -195,6 +203,7 @@
         button{
             border-radius: 10px;
             border: none;
+            margin: 15px;
             width: 80%;
             display: flex;
             align-items: center;
@@ -202,14 +211,10 @@
             font-family: "Poppins", sans-serif;
             font-weight: bold;
         }
-
-        a{
-            text-decoration: none;
-        }
-
     </style>
 </head>
-<body>
+<body >
+
   <div class="mp">
     <div class="sidebar">
         <div class="myprofile">
@@ -223,31 +228,20 @@
             </button>
             <button class="menu-option">
                 <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">DAFTAR SIDANG</a>
+                <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">PENGAJUAN SIDANG/a>
             </button>
-            
             <button class="menu-option">
                 <img src="<?= base_url('aset/images/mp-dosen/feedb.png')  ?>" alt="">
                 <a href="<?= base_url('dashboard.php?page=feedback')  ?>">FEEDBACK</a>
             </button>
             <button class="menu-option">
                 <img src="<?= base_url('aset/images/mp-dosen/info.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=myprofile')  ?>">INFO USER</a>
-            </button>
-            <button class="menu-option">
-            <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                
-                <a href="<?= base_url('dashboard.php?page=datasiswa')  ?>">LIST MAHASISWA</a>
-            </button>
-            <button class="menu-option">
-            <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-
-                <a href="<?= base_url('dashboard.php?page=datadosen')  ?>">LIST DOSEN</a>
+                <a href="<?= base_url('dashboard.php?page=myprofile')  ?>">INFO MAHASISWA</a>
             </button>
             <form class="menu-option" action="" method="POST">
                 <button type="submit" name="logout_btn">
                     <img src="<?= base_url('aset/images/mp-dosen/logout.png')  ?>" alt="">    
-                    Logout
+                    LOGOUT
                 </button>
             </form>
         </div>
@@ -255,16 +249,19 @@
     <div class="esgulpage">
       <div class="rectangle">
         <div class="isi">
-            <?php
-                $filename = "page/$page.php";
+        <?php
+            $filename = "page/$page.php";
                 if(file_exists($filename)){
                     include_once($filename);
                 } else {
-                    echo "";
+                    echo "DASHBOARD";
                 }
-            ?>
+        ?>
       </div>
     </div>
-</div>  
+</div>
+        
+  </div>
+  
 </body>
-</html>
+</html> 
