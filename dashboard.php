@@ -3,15 +3,13 @@
     $data = $authenticated->authDetail();
 
 
-$page = isset($_GET['page']) ? ($_GET['page']) : false;
+    $page = isset($_GET['page']) ? ($_GET['page']) : false;
 
-if (!$_SESSION['authenticated']) {
-    header("location: " . base_url(''));
-    exit();
-}
-
+    if (!$_SESSION['authenticated']) {
+        header("location: " . base_url(''));
+        exit();
+    }
 ?>
-
 <?php include("message.php"); ?>
 
 
@@ -73,17 +71,38 @@ if (!$_SESSION['authenticated']) {
             padding: 0px 20px;
             font-family: "Poppins", sans-serif;
             font-weight: bold;
+            cursor: pointer;
         }
+
+        .menu-option:hover{
+            padding:4%;
+            font-size:18px;
+        }
+
+        #logout_btn:hover{
+            padding:4%;
+            font-size:30px;
+        }
+        
+
+        
 
         .menu-option >img {
         margin: 0px 15px;
         }
 
-        .option {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: stretch;
+        .option1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: stretch;
+            height: 70vh;
+        }
+        .option2 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: stretch;
         }
         .esgulpage {
         background-image:url(<?= base_url('aset/images/mp-dosen/esgulpage.png ') ?>);
@@ -167,41 +186,24 @@ if (!$_SESSION['authenticated']) {
         }
 
         .daftar{
-        display:flex;
-        width:1186px;
-        height:38px;
-        border-radius: 15px;
-        margin: 0 auto;
-        margin-top: 2.5%;
-        font-family: 'Poppins', sans-serif;
-        font-size: 24px;
-        align-content: center;
-        justify-content:center;
-        
-        
-        
+            display:flex;
+            width:1186px;
+            height:38px;
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            align-content: center;
+            justify-content:center;
         }
+
         a {
         text-decoration: none;
-        }
-
-        form menu-option{
-            border-radius: 10px;
-            border: none;
-            margin: 15px;
-            width: 80%;
-            display: flex;
-            align-items: center;
-            padding: 0px 20px;
-            font-family: "Poppins", sans-serif;
-            font-weight: bold;
-
+        color: #551a8b;
         }
 
         button{
             border-radius: 10px;
             border: none;
-            margin: 15px;
             width: 80%;
             display: flex;
             align-items: center;
@@ -209,67 +211,97 @@ if (!$_SESSION['authenticated']) {
             font-family: "Poppins", sans-serif;
             font-weight: bold;
         }
+
+
+        #log-out{
+            z-index:10;
+
+        }
+
     </style>
 </head>
-<body >
-
-  <div class="mp">
-    <div class="sidebar">
-        <div class="myprofile">
-            <div class="dot"></div>
-            <p><?= $data['fname'].' '.$data['lname'] ; ?></p>
-        </div>
-        <div class="option">
-            <button class="menu-option">
-                <img src="<?= base_url('aset/images/mp-dosen/Calendar.png') ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=datajadwalsidang') ?>">INFO JADWAL</a>
-            </button>
-            <button class="menu-option">
-                <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">DAFTAR SIDANG</a>
-            </button>
-            <button class="menu-option">
-                <img src="<?= base_url('aset/images/mp-dosen/feedb.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=feedback')  ?>">FEEDBACK</a>
-            </button>
-            <button class="menu-option">
-                <img src="<?= base_url('aset/images/mp-dosen/info.png')  ?>" alt="">
-                <a href="<?= base_url('dashboard.php?page=myprofile')  ?>">INFO USER</a>
-            </button>
-            <button class="menu-option">
-            <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-                
-                <a href="<?= base_url('dashboard.php?page=datasiswa')  ?>">LIST MAHASISWA</a>
-            </button>
-            <button class="menu-option">
-            <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-
-                <a href="<?= base_url('dashboard.php?page=datadosen')  ?>">LIST DOSEN</a>
-            </button>
-            <form class="menu-option" action="" method="POST">
-                <button type="submit" name="logout_btn">
-                    <img src="<?= base_url('aset/images/mp-dosen/logout.png')  ?>" alt="">    
-                    Logout
+<body>
+    <div class="mp">
+        <div class="sidebar">
+            <div class="myprofile">
+                <div class="dot"></div>
+                <p><?= $data['fname'].' '.$data['lname'] ; ?></p>
+            </div>
+            <div class="option1">
+                <button class="menu-option">
+                    <img src="<?= base_url('aset/images/mp-dosen/Calendar.png') ?>" alt="">
+                    <a href="<?= base_url('dashboard.php?page=datajadwalsidang') ?>">INFO JADWAL</a>
                 </button>
-            </form>
+                <button class="menu-option" id="pengajuan-sidang">
+                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
+                    <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">PENGAJUAN SIDANG</a>
+                </button>
+                <button class="menu-option" id="daftar-sidang">
+                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
+                    <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">DAFTAR SIDANG</a>
+                </button>
+                <button class="menu-option" id="feedback">
+                    <img src="<?= base_url('aset/images/mp-dosen/feedb.png')  ?>" alt="">
+                    <a href="<?= base_url('dashboard.php?page=feedback')  ?>">FEEDBACK</a>
+                </button>
+                <button class="menu-option">
+                    <img src="<?= base_url('aset/images/mp-dosen/info.png')  ?>" alt="">
+                    <a href="<?= base_url('dashboard.php?page=myprofile')  ?>">INFO USER</a>
+                </button>
+                <button class="menu-option" id="list-ms">
+                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
+                    <a href="<?= base_url('dashboard.php?page=datasiswa')  ?>">LIST MAHASISWA</a>
+                </button>
+                <button class="menu-option" id="list-ds">
+                    <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
+                    <a href="<?= base_url('dashboard.php?page=datadosen')  ?>">LIST DOSEN</a>
+                </button>
+            </div>
+            <div class="option2">
+                <button class="menu-option" id="log-out">
+                    <form action="" method="POST">
+                        <button type="submit" id="logout_btn" name="logout_btn">
+                            <img src="<?= base_url('aset/images/mp-dosen/logout.png')?>" alt="">  
+                            <a>LOGOUT</a>
+                        </button>
+                    </form>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="esgulpage">
-      <div class="rectangle">
-        <div class="isi">
-            <?php
-                $filename = "page/$page.php";
-                if(file_exists($filename)){
-                    include_once($filename);
-                } else {
-                    include("page/datajadwalsidang.php");
-                }
-            ?>
-      </div>
-    </div>
-</div>
-        
-  </div>
-  
+        <div class="esgulpage">
+        <div class="rectangle">
+            <div class="isi">
+                <?php
+                    $filename = "page/$page.php";
+                    if(file_exists($filename)){
+                        include_once($filename);
+                    } else {
+                        echo "";
+                    }
+                ?>
+        </div>
+        </div>
+    </div>  
 </body>
-</html> 
+
+<script>
+    var user = localStorage.getItem("user");
+
+    if(user == "Mahasiswa"){
+        document.getElementById('list-ms').style.display = "none";
+        document.getElementById('list-ds').style.display = "none";
+        document.getElementById('pengajuan-sidang').style.display = "none";
+    }
+    else if(user == "Dosen"){
+        document.getElementById('list-ms').style.display = "none";
+        document.getElementById('list-ds').style.display = "none";
+        document.getElementById('daftar-sidang').style.display = "none";
+    }
+    else if(user == "Admin"){
+        document.getElementById('pengajuan-sidang').style.display = "none";
+        document.getElementById('feedback').style.display = "none";
+        document.getElementById('daftar-sidang').style.display = "none";
+    }
+</script>
+
+</html>
