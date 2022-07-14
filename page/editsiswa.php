@@ -2,11 +2,6 @@
 require_once('function/helper.php');
 require_once('function/koneksi.php');
 
-if($_SESSION["id"] == null) {
-    header("location: " . base_url(''));
-    exit();
-}
-
 $error = isset($_GET['emptyform']) ? ($_GET['emptyform']) : false;
 $id = isset($_GET['id']) ? ($_GET['id']) : false;
 
@@ -21,6 +16,10 @@ $mahasiswa = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM mahasiswa 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="<?= base_url('aset/css/editsiswa.css')  ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
 </head>
 <body>
     <div>

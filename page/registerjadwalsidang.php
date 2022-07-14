@@ -17,6 +17,10 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="style<link rel="stylesheet" href="<?= base_url('aset/css/font.css') ?>">
     <style>
             *{
         margin: 0;
@@ -78,10 +82,10 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
     <form method="POST" action="<?= base_url('process/jadwalsidang/process_add.php')  ?>" class="register-form">
     <div class="tambahdosen">Tambah Dosen Penguji</div>
         <div>
-            <input type="text" placeholder="Sesi"class="nama"name="nama" id="nama">
+            <input type="number" placeholder="Sesi"class="nama"name="nama" id="nama">
         </div>
         <div>
-            <input type="number" placeholder="Nama Mahasiswa"class="nama" name="nidn" id="nidn">
+            <input type="text" placeholder="Nama Mahasiswa"class="nama" name="nidn" id="nidn">
         </div>
         <div>
             <input type="text" placeholder="Nama Dosen 1"class="nama" name="jeniskelamin" id="jeniskelamin">
