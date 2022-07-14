@@ -260,7 +260,11 @@
                 if(file_exists($filename)){
                     include_once($filename);
                 } else {
-                    echo "";
+<<<<<<< HEAD
+                    echo "dashboard";
+=======
+                    include("page/datajadwalsidang.php");
+>>>>>>> 280581d626662aa54027e9118d432f32b22bfff3
                 }
             ?>
       </div>
