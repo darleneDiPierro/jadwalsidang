@@ -160,20 +160,20 @@
         }
     </style>
 </head>
-<body >
+<form action="<?= base_url('process/daftar_pengajuan/uploadfile.php') ?>" method="POST" enctype="multipart/form-data" >
   <h1 class="header">Daftar Sidang</h1>
   <div class="text"> Nama </div>
-  <input class="nama"></input>
+  <input class="nama" name="nama"></input>
   <div class="text"> NIM </div>
-  <input class="nim"></input>
+  <input class="nim" name="nim"></input>
   <div class="text"> Unggah file persyaratan sidang Skripsi </div>
-  <input type="file" class="choose-file"></input>
+  <input type="file" name="persyaratan" class="choose-file"></input>
   <div class="text"> Unggah file persetujuan sidang Skripsi </div>
-  <input type="file" class="choose-file"></input>
+  <input type="file" name="persetujuan" class="choose-file"></input>
   <div class="text"> Mengajukan kartu bimbingan </div>
-  <input type="file" class="choose-file"></input>
+  <input type="file" name="kbfile" class="choose-file"></input>
   <div class="text"> Mengajukan kartu bimbingan</div>
-  <input type="file" class="choose-file"></input>
-  <button class="daftar">Daftar</button>
-</body>
+  <input type="file" name="kbimg" class="choose-file"></input>
+  <button type="submit" class="daftar">Daftar</button>
+</form>
 </html> 
