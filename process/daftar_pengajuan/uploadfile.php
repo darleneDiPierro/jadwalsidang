@@ -16,7 +16,7 @@ $kbimg_name = $_FILES['kbimg']['name'];
 
 // move image ke folder
 
-move_uploaded_file($kbimg_tmp,'../../aset/images/'.$kbimg_name);
+move_uploaded_file($kbimg_tmp,'uploads/'.$kbimg_name);
 
 mysqli_query($koneksi, "INSERT INTO daftar_pengajuan(nama, nim, persyaratan, persetujuan, kbfile, kbimg) VALUES ('$nama', '$nim', '$persyaratan', '$persetujuan', '$kbfile', '$kbimg')");
 

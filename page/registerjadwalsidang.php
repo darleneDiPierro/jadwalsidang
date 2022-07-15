@@ -84,7 +84,7 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
             <input type="number" placeholder="Sesi"class="nama" name="sesi" id="nama">
         </div>
         <div>
-            <input type="text" placeholder="Nama Mahasiswa"class="nama" name="namamhs" id="nidn">
+            <input type="text" placeholder="Nama Mahasiswa" class="nama" name="namamhs" id="nidn">
         </div>
         <div>
             <input type="text" placeholder="Nama Dosen 1"class="nama" name="namadosen1" id="namadosen1">
