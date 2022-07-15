@@ -1,36 +1,59 @@
 <?php
     include_once('config/app.php');
 ?>  
-
+<style>
+    .nama{
+    position:relative;
+    margin-top: 0.5%;
+    margin-bottom:2%;
+    width:793px;
+    height:60px;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    opacity: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;   
+    }
+    .submit {
+        display:flex;
+        width:1086px;
+        height:38px;
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-top: 2.5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        justify-content:center; 
+        
+    }
+    .register{
+        color:white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
+        font-size: 50px;
+    }
+</style>
 <form action="" method="POST">
-    <h1>Register</h1>
+    <div class="register">Register</div>
     <div>
-        <label for="fname">First Name</label>
-        <input type="text" name="fname" id="fname">
+        <input type="text" class="nama" placeholder ="First Name"name="fname" id="fname">
     </div>
     <div>
-        <label for="lname">Last Name</label>
-        <input type="text" name="lname" id="lname">
+        <input type="text" class="nama" placeholder ="Last Name" name="lname" id="lname">
     </div>
     <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" class="nama" placeholder ="Email" name="email" id="email">
     </div>
     <div>
-        <label for="uname">Username</label>
-        <input type="text" name="uname" id="uname">
+        <input type="text" class="nama" placeholder ="Username" name="uname" id="uname">
     </div>
     <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+        <input type="password" class="nama" placeholder ="Password" name="password" id="password">
     </div>
     <div>
-        <label for="confirm_password">Confirm Password</label>
-        <input type="password" name="confirm_password" id="confirm_password">
+        <input type="password" class="nama" placeholder ="Confirm Password" name="confirm_password" id="confirm_password">
     </div>
     <div>
-        <label for="confirm_password">Role : </label>
-        <input type="number" name="role_as" id="role_as" min="0" max="2">
+        <input type="number"  class="nama" placeholder ="Role" name="role_as" id="role_as" min="0" max="2">
     </div>
-    <button type="submit" name="register_btn">Submit</button>
+    <button type="submit" class="submit" name="register_btn">Submit</button>
 </form>
