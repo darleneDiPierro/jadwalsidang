@@ -74,27 +74,29 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
 </head>
 <body>
     <form method="POST" action="<?= base_url('process/mahasiswa/process_add.php') ?>" class="register-form">
-    <div class="tambahms">Tambah Mahasiswa</div>
-        <div>
-            <input type="text" placeholder="Nama Mahasiswa"class="nama" name="nama" id="nama">
-        </div>
-        <div>
-            <input type="number" placeholder="NIM"class="nama" name="nim" id="nim">
-        </div>
-        <div>
-            <input type="text" placeholder="Jenis Kelamin"class="nama" name="jeniskelamin" id="jeniskelamin">
-        </div>
-        <div>
-            <input type="text" placeholder="Alamat"class="nama" name="alamat" id="alamat">
-        </div>
-        <div>
-            <input type="text" placeholder="No. Telp"class="nama" name="notelp" id="notelp">
-        </div>
-        <div>
-            <input type="email" placeholder="Email"class="nama" name="email" id="email">
-        </div>
+        <div class="tambahms">Tambah Mahasiswa</div>
+            <div style="display: flex; ">
+                <div>
+                    <input type="text" placeholder="Nama Mahasiswa"class="nama" name="nama" id="nama">
+                </div>
+                <div>
+                    <input type="number" placeholder="NIM"class="nama" name="nim" id="nim">
+                </div>
+                <div>
+                    <input type="text" placeholder="Jenis Kelamin"class="nama" name="jeniskelamin" id="jeniskelamin">
+                </div>
+                <div>
+                    <input type="text" placeholder="Alamat"class="nama" name="alamat" id="alamat">
+                </div>
+                <div>
+                    <input type="text" placeholder="No. Telp"class="nama" name="notelp" id="notelp">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email"class="nama" name="email" id="email">
+                </div>
 
-        <button class="submit" type="submit">Submit</button>
+                <button class="submit" type="submit">Submit</button>
+            </div>
     </form>
 
 </body>
