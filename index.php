@@ -81,6 +81,14 @@ include('config/app.php');
             <p class="login-name" id="login-name">Admin</p>
         </a>
     </div>
+    
+
+    <form action="" method="POST">
+                        <button type="submit" id="logout_btn" name="logout_btn">
+                            <img src="<?= base_url('aset/images/mp-dosen/logout.png')?>" alt="">  
+                            <a>LOGOUT</a>
+                        </button>
+                    </form>
 </body>
  <!-- Latest compiled JavaScript -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

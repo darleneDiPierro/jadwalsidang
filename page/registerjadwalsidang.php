@@ -76,7 +76,6 @@ $process = isset($_GET['process']) ? ($_GET['process']) : false;
         font-size: 25px;
     }
     </style>
-    </style>
 </head>
 <body>
     <form method="POST" action="<?= base_url('process/jadwalsidang/process_add.php')  ?>" class="register-form">

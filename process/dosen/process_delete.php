@@ -7,7 +7,7 @@ require_once('../../function/koneksi.php');
         
         mysqli_query($koneksi, "DELETE FROM dosen WHERE id='$id'");
         
-        header("location: " . BASE_URL . 'dashboard.php?page=datasdosen');
+        header("location: " . BASE_URL . 'dashboard.php?page=datadosen');
     } else {
         echo "gagal";
     }
