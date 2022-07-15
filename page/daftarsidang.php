@@ -160,7 +160,7 @@
         }
     </style>
 </head>
-<form action="<?= base_url('process/daftar_pengajuan/uploadfile.php') ?>" method="POST" >
+<form action="<?= base_url('process/daftar_pengajuan/uploadfile.php') ?>" method="POST" enctype="multipart/form-data" >
   <h1 class="header">Daftar Sidang</h1>
   <div class="text"> Nama </div>
   <input class="nama" name="nama"></input>

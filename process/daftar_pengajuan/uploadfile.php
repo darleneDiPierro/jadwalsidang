@@ -1,11 +1,26 @@
 <?php
-$nama = $_POST['nama']; 
+
+require_once('../../function/helper.php');
+require_once('../../function/koneksi.php');
+
 $nim = $_POST['nim'];
+$nama = $_POST['nama'];
 $persyaratan = $_FILES['persyaratan']['name'];
 $persetujuan = $_FILES['persetujuan']['name'];
-$kartu_bimbingan_file = $_FILES['kbfile']['name'];
-$kartu_bimbingan_img = $_FILES['kbimg']['name'];
+$kbfile = $_FILES['kbfile']['name'];
 
-echo $nama;
+// fetch image
+
+$kbimg_tmp = $_FILES['kbimg']['tmp_name'];
+$kbimg_name = $_FILES['kbimg']['name'];
+
+// move image ke folder
+
+move_uploaded_file($kbimg_tmp,'../../aset/images/'.$kbimg_name);
+
+mysqli_query($koneksi, "INSERT INTO daftar_pengajuan(nama, nim, persyaratan, persetujuan, kbfile, kbimg) VALUES ('$nama', '$nim', '$persyaratan', '$persetujuan', '$kbfile', '$kbimg')");
+
+header("location: " . BASE_URL . 'dashboard.php?page=daftarsidang&process=success');
+
 
 ?>
