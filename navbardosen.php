@@ -14,7 +14,7 @@
 
     <button class="menu-option" id="pengajuan-sidang">
         <img src="<?= base_url('aset/images/mp-dosen/p-sidang.png')  ?>" alt="">
-        <a href="<?= base_url('dashboard.php?page=daftarsidang')  ?>">PENGAJUAN SIDANG</a>
+        <a href="<?= base_url('dashboard.php?page=pengajuansidang')  ?>">PENGAJUAN SIDANG</a>
     </button>
     
     <button class="menu-option" id="feedback">

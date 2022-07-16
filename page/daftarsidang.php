@@ -3,6 +3,18 @@
   require_once('function/koneksi.php');
 ?>
 
+<?php
+
+$process = isset($_GET['process']) ? ($_GET['process']) : false; 
+
+?>
+
+<?php if($process == 'failed') : ?>
+    <div class="error">
+        Semua formulir harus diisi
+    </div>
+<?php endif?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +32,14 @@
         margin: 0;
         padding: 0;
         }
+
+        .error {
+        position: absolute;
+        color: red; 
+        background: #ffc2c4; 
+        padding: 3px;  
+        width: 14.1%;
+    }
 
         .mp {
         display: flex;

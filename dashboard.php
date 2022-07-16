@@ -218,6 +218,21 @@
 
         }
 
+        .pengajuanlist {
+            display: flex;
+        }
+        
+        .nameandnim {
+            margin-right: 90px;
+        }
+
+        .viewbutton {
+            width: 5%;
+            position: absolute;
+            left: 800px;
+            
+        }
+
     </style>
 </head>
 <body>
