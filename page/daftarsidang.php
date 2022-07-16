@@ -168,12 +168,12 @@
   <input class="nim" name="nim"></input>
   <div class="text"> Unggah file persyaratan sidang Skripsi </div>
   <input type="file" name="persyaratan" class="choose-file"></input>
-  <!-- <div class="text"> Unggah file persetujuan sidang Skripsi </div>
+  <div class="text"> Unggah file persetujuan sidang Skripsi </div>
   <input type="file" name="persetujuan" class="choose-file"></input>
   <div class="text"> Mengajukan kartu bimbingan </div>
   <input type="file" name="kbfile" class="choose-file"></input>
   <div class="text"> Mengajukan kartu bimbingan</div>
-  <input type="file" name="kbimg" class="choose-file"></input> -->
+  <input type="file" name="kbimg" class="choose-file"></input>
   <button type="submit" class="daftar">Daftar</button>
 </form>
 </html> 

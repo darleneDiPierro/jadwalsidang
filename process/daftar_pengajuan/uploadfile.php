@@ -7,27 +7,34 @@ $nim = $_POST['nim'];
 $nama = $_POST['nama'];
 
 $tmpFilePersyaratan = $_FILES['persyaratan']['tmp_name'];
-$namePersyaratan = $_FILES['persyaratan']['name'];
+$persyaratan = $_FILES['persyaratan']['name'];
 
 $tmpFilePersetujuan = $_FILES['persetujuan']['tmp_name'];
-$namePersetujuan = $_FILES['persetujuan']['name'];
+$persetujuan = $_FILES['persetujuan']['name'];
 
 $tmpKbFile = $_FILES['kbfile']['tmp_name'];
-$nameKbFile = $_FILES['kbfile']['name'];
+$kbfile = $_FILES['kbfile']['name'];
 
 $tmpKbImg = $_FILES['kbimg']['tmp_name'];
-$nameKbImg = $_FILES['kbimg']['name'];
+$kbimg = $_FILES['kbimg']['name'];
 
-$dir = "../../aset/data/";
+$dir = "../../data/";
 
-move_uploaded_file($tmpFilePersyaratan,$dir.$namePersyaratan);
+move_uploaded_file($tmpFilePersyaratan,$dir.$persyaratan);
 
-if(empty($sesi) || empty($namamhs) || empty($namadosen1) || empty($namadosen2) || empty($tgl)){
-    header("location: ".BASE_URL.'dashboard.php?page=daftarSidang&process=failed');
+move_uploaded_file($tmpFilePersetujuan,$dir.$persetujuan);
+
+move_uploaded_file($tmpKbFile,$dir.$kbfile);
+
+move_uploaded_file($tmpKbImg,$dir.$kbimg);
+
+// add to database 
+
+if(empty($nama) || empty($nim) || empty($persyaratan) || empty($persetujuan) || empty($kbfile) || empty($kbimg)) {
+    header("location: " . BASE_URL . 'dashboard.php?page=daftarsidang&process=failed');
 } else {
-    mysqli_query($koneksi, "INSERT INTO jadwalsidang(sesi,namamhs,namadosen1,namadosen2,tgl) VALUES ('$sesi','$namamhs','$namadosen1','$namadosen2','$tgl')");
-
-    header("location: ".BASE_URL.'dashboard.php?page=datajadwalsidang&process=success');
+    mysqli_query($koneksi, "INSERT INTO daftar_pengajuan(nama, nim, persyaratan, persetujuan, kbfile, kbimg) VALUES ('$nama', '$nim', '$persyaratan', '$persetujuan', '$kbfile', '$kbimg')");
+    header("location: " . BASE_URL . 'dashboard.php?page=daftarsidang&process=success');
 }
 
 ?>
