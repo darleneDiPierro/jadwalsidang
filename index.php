@@ -72,11 +72,11 @@ include('config/app.php');
             <img src="<?= base_url('aset/images/landingpage/mahasiswa.png') ?>" class="dot">
             <p class="login-name" id="login-name">Mahasiswa</p>
         </a>
-        <a onclick="checkUser('Dosen')" href="<?= base_url('login.php') ?>" class="col p-0">
+        <a onclick="checkUser('Dosen')" href="<?= base_url('login.php') ?>" class="col p-0" id="dosen-login">
             <img src="<?= base_url('aset/images/landingpage/dosen.png') ?>" class="dot">
             <p class="login-name" id="login-name">Dosen</p>
         </a>
-        <a onclick="checkUser('Admin')" href="<?= base_url('login.php') ?>" class="col p-0">
+        <a onclick="checkUser('Admin')" href="<?= base_url('login.php') ?>" class="col p-0" id="admin-login">
             <img src="<?= base_url('aset/images/landingpage/Admin.png') ?>" class="dot">
             <p class="login-name" id="login-name">Admin</p>
         </a>
@@ -94,5 +94,10 @@ include('config/app.php');
         localStorage.setItem("user", user);
     }
  </script>
+
+ <?php
+ 
+ ?>
+
 </html>
 

@@ -15,7 +15,7 @@ if(empty($sesi) || empty($namamhs) || empty($namadosen1) || empty($namadosen2) |
 } else {
 
     mysqli_query($koneksi, "UPDATE jadwalsidang SET sesi='$sesi', namamhs='$namamhs', namadosen1='$namadosen1', namadosen2='$namadosen2', tgl='$tgl' WHERE id='$id'");
-
+    
     header("location: " . BASE_URL . 'dashboard.php?page=datajadwalsidang&status=success');
     
 }

@@ -7,6 +7,7 @@ $id = isset($_GET['id']) ? ($_GET['id']) : false;
 
 $jadwalsidang = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM jadwalsidang WHERE id=$id"));
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +92,7 @@ $jadwalsidang = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM jadwals
             </div>
             <div>
                 <label>Nama Mahasiswa</label>
-                <input type="text" placeholder="Nama Mahasiswa" class="nama" name="namamhs" id="nidn" value="<?= $jadwalsidang['namamhs'] ?>">
+                <input type="text" placeholder="Nama Mahasiswa" class="nama" name="namamhs"  id="nidn" value="<?= $jadwalsidang['namamhs'] ?>">
 
             </div>
             <div>
@@ -106,7 +107,7 @@ $jadwalsidang = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM jadwals
             </div>
             <div>
                 <label>Tanggal</label>
-                <input type="date" name="tgl" id="tgl" placeholder="yyyy-mm-dd" value=""min="1950-01-01" max="2030-12-31">
+                <input type="date" name="tgl" id="tgl" placeholder="yyyy-mm-dd" value="<?= $jadwalsidang['tgl'] ?>" min="1950-01-01" max="2030-12-31">
             </div>   
             <button type="submit">Submit</button>
         </form>
