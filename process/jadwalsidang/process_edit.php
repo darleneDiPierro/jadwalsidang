@@ -7,6 +7,7 @@ $namamhs = $_POST['namamhs'];
 $namadosen1 = $_POST['namadosen1'];
 $namadosen2 = $_POST['namadosen2'];
 $tgl = $_POST['tgl'];
+$id = $_POST['id'];
 
 if(empty($sesi) || empty($namamhs) || empty($namadosen1) || empty($namadosen2) || empty($tgl)) {
 

@@ -82,35 +82,32 @@ $jadwalsidang = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM jadwals
                 </div>
             <?php endif; ?>
     
-            <form method="POST" action="<?=  BASE_URL. 'process/jadwalsidang/process_edit.php'  ?>" class="register-form">
+            <form method="POST" action="<?=  base_url('process/jadwalsidang/process_edit.php') ?>" class="register-form">
+
             <input name="id" value="<?= $jadwalsidang['id'] ?>" type="hidden">
             <div>
                 <label>Sesi</label>
-               
-                <input type="number" placeholder="Sesi" value="<?= $jadwalsidang['sesi'] ?>" class="nama" name="sesi" id="nama">
-
+                <input type="number" placeholder="Sesi" class="nama" name="sesi" id="nama" value="<?= $jadwalsidang['sesi']?>">
             </div>
             <div>
                 <label>Nama Mahasiswa</label>
-                <input type="text" placeholder="Nama Mahasiswa" class="nama" name="namamhs"  id="nidn" value="<?= $jadwalsidang['namamhs'] ?>">
-
+                <input type="text" placeholder="Nama Mahasiswa" class="nama" name="namamhs" id="nidn" value="<?= $jadwalsidang['namamhs']?>">
             </div>
             <div>
                 <label>Nama Dosen 1</label>
-                <input type="text" placeholder="Nama Dosen 1" class="nama" name="namadosen1" id="namadosen1" value="<?= $jadwalsidang['namadosen1'] ?>">
-
+                <input type="text" placeholder="Nama Dosen 1"class="nama" name="namadosen1" id="namadosen1" value="<?= $jadwalsidang['namadosen1']?>">
             </div>
             <div>
                 <label>Nama Dosen 2</label>
-                <input type="text" placeholder="Nama Dosen 2"class="nama" name="namadosen2" id="namadosen2" value="<?= $jadwalsidang['namadosen2'] ?>">
-
+                <input type="text" placeholder="Nama Dosen 2"class="nama" name="namadosen2" id="namadosen2" value="<?= $jadwalsidang['namadosen2']?>">
             </div>
             <div>
                 <label>Tanggal</label>
-                <input type="date" name="tgl" id="tgl" placeholder="yyyy-mm-dd" value="<?= $jadwalsidang['tgl'] ?>" min="1950-01-01" max="2030-12-31">
+                <input type="date" class="nama" name="tgl" id="tgl" placeholder="mm-dd-yy" value="<?= $jadwalsidang['tgl']?>" min="1950-01-01" max="2030-12-31" >
             </div>   
             <button type="submit">Submit</button>
         </form>
+        
     
         </div>
     </div>
